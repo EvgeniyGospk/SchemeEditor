@@ -1,0 +1,310 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="27.0.4">
+  <diagram name="Страница — 1" id="4U2HZRlqW1ZR5GLGUhav">
+    <mxGraphModel dx="4901" dy="3435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BTwWanYokiu63mDM-xLf-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="1190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="-890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-6" target="BTwWanYokiu63mDM-xLf-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-6" target="BTwWanYokiu63mDM-xLf-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-6" value="App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2080" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-11" target="BTwWanYokiu63mDM-xLf-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-11" target="BTwWanYokiu63mDM-xLf-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-11" target="BTwWanYokiu63mDM-xLf-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-11" target="BTwWanYokiu63mDM-xLf-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-11" value="EditorScreen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-12" value="WelcomeScreen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2200" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-13" value="Toolbar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-14" value="PropertiesPanel&lt;br&gt;(отображение и редактирование свойств объекта/объектов)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="660" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-15" value="CanvasView&lt;br&gt;(рендерит холст, фигуры, линии)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-16" value="Pallete&lt;br&gt;(отображает доступные фигуры)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1790" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-21" target="BTwWanYokiu63mDM-xLf-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-21" target="BTwWanYokiu63mDM-xLf-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-21" target="BTwWanYokiu63mDM-xLf-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-21" target="BTwWanYokiu63mDM-xLf-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-21" value="Services/Manager" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3340" y="1150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-22" value="StateManager (Zustand)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2447" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-23" value="CommandManager&lt;div&gt;(Управляет стеками Undo/Redo. Выполняет команды.)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2890" y="1150" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-24" value="ShapePlaginRegistry" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2890" y="1350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-27" target="BTwWanYokiu63mDM-xLf-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-27" target="BTwWanYokiu63mDM-xLf-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-27" value="StorageService&lt;div&gt;(Работа с IndexedDB, импорт/экспорт JSON)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2890" y="785" width="210" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-29" target="BTwWanYokiu63mDM-xLf-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-29" value="ObserverService&lt;div&gt;(Реестр плагинов фигур. Предоставляет информацию о фигурах.)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2890" y="976" width="210" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-30" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1850" y="1080" as="sourcePoint" />
+            <mxPoint x="1850" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-31" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="BTwWanYokiu63mDM-xLf-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1850" y="1080" as="sourcePoint" />
+            <mxPoint x="2260" y="1080" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-32" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1670" y="1080" as="sourcePoint" />
+            <mxPoint x="1670" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-33" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1670" y="1080" as="sourcePoint" />
+            <mxPoint x="1850" y="1080" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-34" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1489.5" y="1080" as="sourcePoint" />
+            <mxPoint x="1489.5" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-35" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1490" y="1079" as="sourcePoint" />
+            <mxPoint x="1670" y="1079" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-36" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2320" y="600" as="sourcePoint" />
+            <mxPoint x="2450" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-37" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="BTwWanYokiu63mDM-xLf-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2470" y="1045" as="sourcePoint" />
+            <mxPoint x="2520" y="995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-38" value="fetchSchemaList_action, deleteSchema_action, createNewSchema_action(name)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=75;" vertex="1" parent="1">
+          <mxGeometry x="2247" y="780" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-39" value="schemaList, isLoading, error" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2387" y="730" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-40" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="BTwWanYokiu63mDM-xLf-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2440" y="1060" as="sourcePoint" />
+            <mxPoint x="2230" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-41" value="currentSchemaData, currentSchemaId" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=60;" vertex="1" parent="1">
+          <mxGeometry x="2190" y="820" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-42" value="loadSchema_action(schemaId)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=60;" vertex="1" parent="1">
+          <mxGeometry x="2177" y="716" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-43" value="props" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-44" value="props" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1790" y="610" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-45" value="props" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="610" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-46" value="props" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="610" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-47" value="buttons:" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="730" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-48" value="Save as file" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="770" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-49" value="Save" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="805" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-50" value="Import" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="840" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-51" value="Undo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="875" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-52" value="Redo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="910" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-53" value="Zoom In" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="946" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-54" value="Zoom out" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="982" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-55" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="BTwWanYokiu63mDM-xLf-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2170" y="950" as="sourcePoint" />
+            <mxPoint x="2180" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-56" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2170" y="946" as="sourcePoint" />
+            <mxPoint x="2440" y="1060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-57" value="canUndo, canRedo, currentZoom" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2080" y="880" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-58" value="saveSchema_action, importSchema_action(fileData), undo_action, redo_action, zoomIn_action, zoomOut_action" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=30;" vertex="1" parent="1">
+          <mxGeometry x="2140" y="912" width="262" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-59" value="availableShapes_list" style="text;whiteSpace=wrap;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="1770" y="884" width="110" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-60" value="createShape_action(shapeType, position)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="884" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-61" value="shapes_on_canvas, lines_on_canvas, selectedElements, currentZoom, canvasConfig" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1590" y="840" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-62" value="selectElement_action(elementId, isMultiSelect), moveElement_action(elementId, newPosition), createLine_action(fromShape, toShape), deleteElement_action(elementId), dblClickTextEdit_action(elementId)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="1560" y="840" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-63" value="selectedElement_properties, available_fonts_colors_etc" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="820" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-64" value="updateElementProperties_action(elementId, newProperties)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="820" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-65" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2567" y="1090" as="sourcePoint" />
+            <mxPoint x="2890" y="1190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-66" value="execute_command(command_object)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=15;" vertex="1" parent="1">
+          <mxGeometry x="2690" y="1102" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-67" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2700" y="1250" as="sourcePoint" />
+            <mxPoint x="2570" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-68" value="выполняет команду, которая модифицирует состояние" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=15;" vertex="1" parent="1">
+          <mxGeometry x="2570" y="1160" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-69" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-22" target="BTwWanYokiu63mDM-xLf-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2510" y="1310" as="sourcePoint" />
+            <mxPoint x="2560" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-70" value="getAvailableShapeDefinitions()" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=35;" vertex="1" parent="1">
+          <mxGeometry x="2730" y="1250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-71" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.033;entryY=0.883;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="BTwWanYokiu63mDM-xLf-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2567" y="1070" as="sourcePoint" />
+            <mxPoint x="2617" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-72" value="listSchemas(), loadSchema(id), saveSchema(data), deleteSchema(id), importSchema(jsonData), exportSchema(schemaData)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=-30;" vertex="1" parent="1">
+          <mxGeometry x="2570" y="929" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-73" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.617;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="BTwWanYokiu63mDM-xLf-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2567" y="1080" as="sourcePoint" />
+            <mxPoint x="2617" y="1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-74" value="logError(error, context), logUserAction(action, details)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=-15;" vertex="1" parent="1">
+          <mxGeometry x="2665" y="1001" width="190" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-75" value="IndexedDB" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2800" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-76" value="File System API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3060" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-77" value="API" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2965" y="720" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-78" value="Внешняя система для хранения логов" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2935" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-79" value="Логи" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2995" y="946" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-81" target="BTwWanYokiu63mDM-xLf-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-81" value="figure1Plugin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2820" y="1440" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-83" target="BTwWanYokiu63mDM-xLf-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-83" value="figure2Plugin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2915" y="1440" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="BTwWanYokiu63mDM-xLf-85" target="BTwWanYokiu63mDM-xLf-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BTwWanYokiu63mDM-xLf-85" value="figure(n)Plugin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3010" y="1440" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

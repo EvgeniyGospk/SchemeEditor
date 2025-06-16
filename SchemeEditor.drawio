@@ -1,0 +1,372 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="27.0.4">
+  <diagram name="Страница — 1" id="lCBejAF5jfNfG0rtpm_z">
+    <mxGraphModel dx="1532" dy="3183" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-BFE-0557lTRO9eb6wUR-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-BFE-0557lTRO9eb6wUR-1" target="-BFE-0557lTRO9eb6wUR-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-BFE-0557lTRO9eb6wUR-1" target="-BFE-0557lTRO9eb6wUR-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-BFE-0557lTRO9eb6wUR-1" target="-BFE-0557lTRO9eb6wUR-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-174" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-BFE-0557lTRO9eb6wUR-1" target="-BFE-0557lTRO9eb6wUR-173" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-1" value="Общая архитектура" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="159" y="-850" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-3" value="Model&lt;br&gt;(&quot;чистые&quot; TypeScript классы)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-670" y="-668" width="130" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-4" value="Controller&lt;br&gt;(связующее звено)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="164" y="-650" width="110" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-5" value="View&lt;br&gt;(React-компоненты)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="869.12" y="-673" width="140" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-9" value="&lt;div&gt;Ответственность View: Отображение данных, передача действий пользователя Контроллеру. View не меняет Модель напрямую.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#2449FF);" parent="1" vertex="1">
+          <mxGeometry x="839.12" y="-630" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-10" value="Ответственность Модели: Хранение данных, бизнес-логика, связанная с данными (например, вычисление точек подключения), создание снимков состояния." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#2449FF);" parent="1" vertex="1">
+          <mxGeometry x="-720" y="-595" width="230" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-11" value="&lt;div&gt;Ответственность Контроллера: Принимать действия от View, создавать и передавать Команды в CommandManager, взаимодействовать с сервисами (фабрика, хранилище), управлять состоянием редактора.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#2449FF);" parent="1" vertex="1">
+          <mxGeometry x="94" y="-597" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-12" value="&lt;div&gt;App.tsx&lt;/div&gt;&lt;div&gt;&amp;nbsp;Корневой компонент, управляет роутингом между экранами.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="856.12" y="-500" width="183" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-BFE-0557lTRO9eb6wUR-13" target="-BFE-0557lTRO9eb6wUR-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-13" value="EditorScreen.tsx&lt;div&gt;Основной экран&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="729.12" y="-390" width="164.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="-BFE-0557lTRO9eb6wUR-14" target="-BFE-0557lTRO9eb6wUR-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-14" value="&lt;div&gt;WelcomeScreen.tsx&lt;/div&gt;&lt;div&gt;&amp;nbsp;Отображает список схем из IndexedDB, кнопки &quot;Создать&quot;, &quot;Открыть&quot;.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="-442" width="193" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-15" value="Toolbar.tsx&lt;div&gt;Кнопки &quot;Сохранить&quot;, &quot;Сохранить как файл&quot;, &quot;Импорт из файла&quot;, &quot;Undo&quot;, &quot;Redo&quot;.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="716.37" y="-320" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-19" value="PropertiesPanel.tsx&lt;div&gt;&amp;nbsp;Отображает и позволяет редактировать свойства выделенной фигуры/линии.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="716.37" y="-30" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-20" value="Palette.tsx&lt;div&gt;Список доступных фигур для перетаскивания.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="716.37" y="-230" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-21" value="CanvasView.tsx&lt;div&gt;&amp;nbsp;Область с Konva.js для отображения фигур и линий. Обрабатывает пользовательский ввод на холсте (клики, drag-n-drop).&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="710" y="-140" width="202.75" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-23" value="Scheme(&lt;span style=&quot;background-color: transparent;&quot;&gt;главный класс в Модели&lt;/span&gt;)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-730" y="-490" width="250" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-24" value="&lt;div&gt;id: string&lt;/div&gt;&lt;div&gt;name: string&lt;/div&gt;&lt;div&gt;lastModified: number&lt;/div&gt;&lt;div&gt;private shapes: BaseShape[]&lt;/div&gt;&lt;div&gt;private lines: Line[]&lt;/div&gt;&lt;div&gt;private observers: IObserver[]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-23" vertex="1">
+          <mxGeometry y="26" width="250" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-25" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-23" vertex="1">
+          <mxGeometry y="130" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-26" value="&lt;div&gt;addShape()&lt;/div&gt;&lt;div&gt;removeShape()&lt;/div&gt;&lt;div&gt;getShapeById()&lt;/div&gt;&lt;div&gt;addLine()&lt;/div&gt;&lt;div&gt;removeLine()&lt;/div&gt;&lt;div&gt;getLineById()&lt;/div&gt;&lt;div&gt;registerObserver()&lt;/div&gt;&lt;div&gt;notifyObservers()&lt;/div&gt;&lt;div&gt;toJSON(): SchemeStoreData&lt;/div&gt;&lt;div&gt;static fromJSON(data: SchemeStoreData, shapeFactory): Scheme&lt;/div&gt;&lt;div&gt;createSchemeMemento(): ISchemeMemento&lt;/div&gt;&lt;div&gt;restoreFromSchemeMemento(memento: ISchemeMemento, shapeFactory)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-23" vertex="1">
+          <mxGeometry y="138" width="250" height="262" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-27" value="BaseShape (абстрактный класс)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-720" y="40" width="220" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-28" value="&lt;div&gt;public id: string&lt;/div&gt;&lt;div&gt;public type: string&lt;/div&gt;&lt;div&gt;public x: number&lt;/div&gt;&lt;div&gt;public y: number&lt;/div&gt;&lt;div&gt;public zIndex: number&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-27" vertex="1">
+          <mxGeometry y="26" width="220" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-29" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-27" vertex="1">
+          <mxGeometry y="130" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-30" value="&lt;div&gt;getId(): string&lt;/div&gt;&lt;div&gt;getType(): string&lt;/div&gt;&lt;div&gt;getProperties(): Record&amp;lt;string, any&amp;gt;&lt;/div&gt;&lt;div&gt;setProperties(props: Partial&amp;lt;Record&amp;lt;string, any&amp;gt;&amp;gt;): void&lt;/div&gt;&lt;div&gt;getBounds(): { x: number; y: number; width: number; height: number }&lt;/div&gt;&lt;div&gt;move(dx: number, dy: number): void&amp;nbsp;&lt;/div&gt;&lt;div&gt;setZIndex(zIndex: number): void&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-27" vertex="1">
+          <mxGeometry y="138" width="220" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-31" value="Ограничивающий прямоугольник или bounds - самый маленький прямоугольник, который полностью содержит фигуру, и стороны которого параллельны осям координат (краям холста)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-750" y="1760" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-32" value="&lt;div&gt;Конкретные Классы Фигур (Rectangle, Circle, UmlClass, UmlComponent)&lt;/div&gt;&lt;div&gt;Каждый из них наследует BaseShape&lt;/div&gt;&lt;div&gt;Имеют свои уникальные свойства (например, Rectangle.width: number, Circle.radius: number).&lt;/div&gt;&lt;div&gt;Реализуют абстрактные методы, унаследованные от BaseShape.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-720" y="370" width="540" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-33" value="Line (Класс)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-720" y="540" width="230" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-34" value="&lt;div&gt;public id: string&lt;/div&gt;&lt;div&gt;public type: &quot;line&quot;&lt;/div&gt;&lt;div&gt;public fromShapeId: string&lt;/div&gt;&lt;div&gt;public fromConnectionPointId: string&lt;/div&gt;&lt;div&gt;public toShapeId: string&lt;/div&gt;&lt;div&gt;public toConnectionPointId: string&lt;/div&gt;&lt;div&gt;public strokeColor: string&lt;/div&gt;&lt;div&gt;public strokeWidth: number&lt;/div&gt;&lt;div&gt;public zIndex: number&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-33" vertex="1">
+          <mxGeometry y="26" width="230" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-35" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-33" vertex="1">
+          <mxGeometry y="200" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-36" value="&lt;div&gt;constructor(props: LineProperties)&lt;/div&gt;&lt;div&gt;getProperties(): LineProperties&lt;/div&gt;&lt;div&gt;setProperties(props: Partial&amp;lt;LineProperties&amp;gt;): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-33" vertex="1">
+          <mxGeometry y="208" width="230" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-37" value="Line (Класс)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-720" y="852" width="230" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-38" value="&lt;div&gt;public id: string&lt;/div&gt;&lt;div&gt;public type: &quot;line&quot;&lt;/div&gt;&lt;div&gt;public fromShapeId: string&lt;/div&gt;&lt;div&gt;public fromConnectionPointId: string&lt;/div&gt;&lt;div&gt;public toShapeId: string&lt;/div&gt;&lt;div&gt;public toConnectionPointId: string&lt;/div&gt;&lt;div&gt;public strokeColor: string&lt;/div&gt;&lt;div&gt;public strokeWidth: number&lt;/div&gt;&lt;div&gt;public zIndex: number&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-37" vertex="1">
+          <mxGeometry y="26" width="230" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-39" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-37" vertex="1">
+          <mxGeometry y="200" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-40" value="&lt;div&gt;constructor(props: LineProperties)&lt;/div&gt;&lt;div&gt;getProperties(): LineProperties&lt;/div&gt;&lt;div&gt;setProperties(props: Partial&amp;lt;LineProperties&amp;gt;): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-37" vertex="1">
+          <mxGeometry y="208" width="230" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-BFE-0557lTRO9eb6wUR-41" target="-BFE-0557lTRO9eb6wUR-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-41" value="ISchemeMemento - Интерфейс&lt;div&gt;getState(): SchemeStoreData&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-630" y="1210" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-46" value="SchemeMemento (Класс, реализует ISchemeMemento)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-720" y="1310" width="370" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-47" value="state: SchemeStoreData" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-46" vertex="1">
+          <mxGeometry y="26" width="370" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-48" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-46" vertex="1">
+          <mxGeometry y="80" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-49" value="constructor(state: SchemeStoreData)&lt;div&gt;getState(): SchemeStoreData&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-46" vertex="1">
+          <mxGeometry y="88" width="370" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-53" value="AppController&lt;div&gt;Главный координатор, точка входа для действий из UI, инициализирует другие сервисы.&amp;nbsp;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="-457" width="344" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-58" value="CommandManager (Класс)&lt;div&gt;Роль: Управляет выполнением команд и стеками Undo/Redo.&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="107" y="-310" width="250" height="310" as="geometry">
+            <mxRectangle x="-83" y="-290" width="380" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-59" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;private undoStack: ICommand[]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;private redoStack: ICommand[]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-58" vertex="1">
+          <mxGeometry y="26" width="250" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-60" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-58" vertex="1">
+          <mxGeometry y="120" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-61" value="&lt;div&gt;executeCommand(command: ICommand): void (выполняет команду, добавляет в undoStack, очищает redoStack)&lt;/div&gt;&lt;div&gt;undo(): void (берет команду из undoStack, вызывает command.undo(), добавляет в redoStack)&lt;/div&gt;&lt;div&gt;redo(): void (берет команду из redoStack, вызывает command.execute(), добавляет в undoStack)&lt;/div&gt;&lt;div&gt;canUndo(): boolean&lt;/div&gt;&lt;div&gt;canRedo(): boolean&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-58" vertex="1">
+          <mxGeometry y="128" width="250" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-62" value="«interface»&lt;br&gt;&lt;b&gt;ICommand&lt;/b&gt;" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="177" y="40" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-63" value="Роль: Определяет контракт для всех команд." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="172" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-64" value="&lt;div&gt;Методы:&lt;/div&gt;&lt;div&gt;execute(): void&lt;/div&gt;&lt;div&gt;undo(): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="172" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-65" value="&lt;div&gt;Свойства:&lt;/div&gt;&lt;div&gt;&lt;div&gt;scheme: Scheme&lt;/div&gt;&lt;div&gt;memento?: ISchemeMemento&lt;/div&gt;&lt;div&gt;shapeFactory?: ShapeFactory&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80.5" y="150" width="303" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-66" value="Конкретные Команды (Классы, реализуют ICommand)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="128" y="360" width="208" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-67" value="&lt;div&gt;CreateShapeCommand&lt;/div&gt;&lt;div&gt;MoveShapeCommand&lt;/div&gt;&lt;div&gt;ChangePropertyCommand&lt;/div&gt;&lt;div&gt;DeleteElementCommand&lt;/div&gt;&lt;div&gt;CreateLineCommand&lt;/div&gt;&lt;div&gt;SaveToDbCommand&lt;/div&gt;&lt;div&gt;ExportToFileCommand&lt;/div&gt;&lt;div&gt;ImportFromFileCommand&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="136" y="410" width="192" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-68" value="&lt;div&gt;Ключевые взаимодействия:&lt;/div&gt;&lt;div&gt;Создаются AppController.&lt;/div&gt;&lt;div&gt;Взаимодействуют с Model Layer.&lt;/div&gt;&lt;div&gt;Могут использовать ShapeFactory.&lt;/div&gt;&lt;div&gt;Могут использовать StorageService.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="132" y="562.5" width="200" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-69" value="StorageService (Класс)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="117" y="884" width="433" height="226" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-71" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-69" vertex="1">
+          <mxGeometry y="26" width="433" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-72" value="&lt;div&gt;getAllSchemesFromDB(): Promise&amp;lt;SchemeMetadata[]&amp;gt;&lt;/div&gt;&lt;div&gt;getSchemeDataFromDB(id: string): Promise&amp;lt;SchemeStoreData | undefined&amp;gt;&lt;/div&gt;&lt;div&gt;saveSchemeToDB(scheme: Scheme): Promise&amp;lt;void&amp;gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;deleteSchemeFromDB(id: string): Promise&amp;lt;void&amp;gt;&lt;/div&gt;&lt;div&gt;exportSchemeToFile(scheme: Scheme): void&amp;nbsp;&lt;/div&gt;&lt;div&gt;importSchemeFromFile(): Promise&amp;lt;SchemeStoreData | undefined&amp;gt;&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-69" vertex="1">
+          <mxGeometry y="34" width="433" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-73" value="Роль: Инкапсулирует логику работы с хранилищами данных." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="117" y="1111" width="433" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-74" value="&lt;div&gt;Ключевые взаимодействия:&lt;/div&gt;&lt;div&gt;С IndexedDB (Browser API): Чтение/запись.&lt;/div&gt;&lt;div&gt;С File System API / Browser Download/Upload (Browser API): Чтение/запись файлов.&lt;/div&gt;&lt;div&gt;С Model Layer (Scheme): Вызывает scheme.toJSON() для сохранения, принимает SchemeStoreData для создания/обновления схемы (через Scheme.fromJSON() или передавая данные в AppController).&lt;/div&gt;&lt;div&gt;Используется командами типа SaveToDbCommand, ImportFromFileCommand.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="117" y="1169" width="433" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-75" value="ShapeFactory (Класс)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1360" width="433" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-77" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-75" vertex="1">
+          <mxGeometry y="26" width="433" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-78" value="createShape(type: string): BaseShape" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-75" vertex="1">
+          <mxGeometry y="34" width="433" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-79" value="Роль: Создает экземпляры объектов Модели фигур." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1450" width="433" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-80" value="&lt;div&gt;Ключевые взаимодействия:&lt;/div&gt;&lt;div&gt;С ShapePluginRegistry (Plugins Layer): Получает определения фигур.&lt;/div&gt;&lt;div&gt;С Model Layer (Rectangle, Circle, etc.): Создает экземпляры конкретных классов фигур.&lt;/div&gt;&lt;div&gt;Используется CreateShapeCommand а также Scheme.fromJSON() и Scheme.restoreFromSchemeMemento().&lt;/div&gt;&lt;div&gt;Используется при приведении из storeData в memento к объекту Shape&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1510" width="433" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-84" value="Роль: Отслеживает выделенные элементы на холсте." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="117" y="1790" width="433" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-85" value="&lt;div&gt;Ключевые взаимодействия:&lt;/div&gt;&lt;div&gt;От CanvasView (через AppController): Получает информацию о кликах/выделении рамкой.&lt;/div&gt;&lt;div&gt;К Model Layer (Scheme): Запрашивает объекты фигур по ID.&lt;/div&gt;&lt;div&gt;К PropertiesPanel (через AppController или как Subject): Уведомляет об изменении выделения.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="117" y="1851" width="433" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-87" value="&lt;div&gt;SelectionManager (Класс)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="117" y="1650" width="433" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-88" value="private selectedElementIds: string[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-87" vertex="1">
+          <mxGeometry y="26" width="433" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-89" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-87" vertex="1">
+          <mxGeometry y="52" width="433" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-90" value="&lt;div&gt;selectElement(id: string, multiSelect: boolean): void&lt;/div&gt;&lt;div&gt;deselectElement(id: string): void&lt;/div&gt;&lt;div&gt;clearSelection(): void&lt;/div&gt;&lt;div&gt;getSelectedElements(): BaseShape[] (получает объекты из Scheme по ID)&lt;/div&gt;&lt;div&gt;isSelected(id: string): boolean&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-87" vertex="1">
+          <mxGeometry y="60" width="433" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-173" value="Plugins Layer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-670" y="-1090" width="130" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-175" value="ShapePluginRegistry (Класс)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-730" y="-1350" width="250" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-176" value="private plugins: Map&amp;lt;string, ShapePluginDefinition&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-175" vertex="1">
+          <mxGeometry y="26" width="250" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-177" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-175" vertex="1">
+          <mxGeometry y="130" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-178" value="&lt;div&gt;register(pluginDef: ShapePluginDefinition): void&lt;/div&gt;&lt;div&gt;getPluginDefinition(type: string): ShapePluginDefinition | undefined&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-175" vertex="1">
+          <mxGeometry y="138" width="250" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-179" value="«interface» ShapePluginDefinition" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-730" y="-1590" width="240" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-181" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-179" vertex="1">
+          <mxGeometry y="26" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-182" value="&lt;div&gt;type: string&lt;/div&gt;&lt;div&gt;label: string&lt;/div&gt;&lt;div&gt;icon: React.ComponentType&amp;nbsp;&lt;/div&gt;&lt;div&gt;defaultProperties: object&amp;nbsp;&lt;/div&gt;&lt;div&gt;propertyUIDefinitions: PropertyUIDefinition[]&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-179" vertex="1">
+          <mxGeometry y="34" width="240" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-183" value="interface PropertyUIDefinition" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-470" y="-1528" width="240" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-184" value="&lt;div&gt;&amp;nbsp;key: string;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // Ключ свойства&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;label: string;&amp;nbsp; &amp;nbsp; &amp;nbsp; // Метка для отображения в UI&lt;/div&gt;&lt;div&gt;&amp;nbsp;type: &quot;text&quot; | &quot;number&quot; | &quot;color&quot; | &quot;textarea&quot; | &quot;boolean&quot;; // Тип редактора в UI&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-183" vertex="1">
+          <mxGeometry y="26" width="240" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-185" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-183" vertex="1">
+          <mxGeometry y="130" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-188" value="Сами плагины&lt;div&gt;rectangle.plugin.ts&lt;/div&gt;&lt;div&gt;circle.plugin.ts&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="16" y="-1370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-189" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" target="-BFE-0557lTRO9eb6wUR-188" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-490" y="-1590" as="sourcePoint" />
+            <mxPoint x="-440" y="-1640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-190" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.985;entryY=0.826;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="-BFE-0557lTRO9eb6wUR-188" target="-BFE-0557lTRO9eb6wUR-176" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-100" y="-1220" as="sourcePoint" />
+            <mxPoint x="-50" y="-1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-191" value="&lt;div&gt;EditorStateManager (Класс)&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="2000" width="630" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-192" value="private currentState: IEditorState" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-191" vertex="1">
+          <mxGeometry y="26" width="630" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-193" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-191" vertex="1">
+          <mxGeometry y="52" width="630" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-194" value="&lt;div&gt;constructor(initialState: IEditorState)&lt;/div&gt;&lt;div&gt;setState(newState: IEditorState, transitionArgs?: any): void (вызывает onExitState у старого и onEnterState у нового)&lt;/div&gt;&lt;div&gt;getCurrentState(): IEditorState&lt;/div&gt;&lt;div&gt;handleCanvasMouseDown(eventData: CanvasMouseEventData): void (вызывает this.currentState.handleMouseDown(eventData, this))&lt;/div&gt;&lt;div&gt;handleCanvasMouseMove(eventData: CanvasMouseEventData): void (вызывает this.currentState.handleMouseMove(eventData, this))&lt;/div&gt;&lt;div&gt;handleCanvasMouseUp(eventData: CanvasMouseEventData): void (вызывает this.currentState.handleMouseUp(eventData, this))&lt;/div&gt;&lt;div&gt;handleCanvasDblClick(eventData: CanvasMouseEventData): void (вызывает this.currentState.handleDblClick(eventData, this))&lt;/div&gt;&lt;div&gt;handleKeyDown(eventData: CanvasKeyboardEventData): void (вызывает this.currentState.handleKeyDown(eventData, this))&lt;/div&gt;&lt;div&gt;handleKeyUp(eventData: CanvasKeyboardEventData): void (вызывает this.currentState.handleKeyUp(eventData, this))&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-191" vertex="1">
+          <mxGeometry y="60" width="630" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-195" value="&lt;div&gt;«interface» IEditorState&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="2410" width="630" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-196" value="private currentState: IEditorState" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-195" vertex="1">
+          <mxGeometry y="26" width="630" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-197" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-195" vertex="1">
+          <mxGeometry y="52" width="630" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-198" value="&lt;div&gt;onEnterState(manager: EditorStateManager, args?: any): void&lt;/div&gt;&lt;div&gt;Назначение: Вызывается при активации этого состояния. Для инициализации, изменения курсора, UI и т.д.&lt;/div&gt;&lt;div&gt;args: Опциональные аргументы, переданные из предыдущего состояния или при установке этого состояния.&lt;/div&gt;&lt;div&gt;onExitState(manager: EditorStateManager): void&lt;/div&gt;&lt;div&gt;Назначение: Вызывается при деактивации этого состояния. Для очистки, восстановления UI.&lt;/div&gt;&lt;div&gt;handleMouseDown(eventData: CanvasMouseEventData, manager: EditorStateManager): void&lt;/div&gt;&lt;div&gt;Назначение: Обработка нажатия кнопки мыши на холсте.&lt;/div&gt;&lt;div&gt;handleMouseMove(eventData: CanvasMouseEventData, manager: EditorStateManager): void&lt;/div&gt;&lt;div&gt;Назначение: Обработка движения мыши по холсту.&lt;/div&gt;&lt;div&gt;handleMouseUp(eventData: CanvasMouseEventData, manager: EditorStateManager): void&lt;/div&gt;&lt;div&gt;Назначение: Обработка отпускания кнопки мыши на холсте.&lt;/div&gt;&lt;div&gt;handleDblClick(eventData: CanvasMouseEventData, manager: EditorStateManager): void&lt;/div&gt;&lt;div&gt;Назначение: Обработка двойного клика мыши на холсте.&lt;/div&gt;&lt;div&gt;handleKeyDown(eventData: CanvasKeyboardEventData, manager: EditorStateManager): void&lt;/div&gt;&lt;div&gt;Назначение: Обработка нажатия клавиши.&lt;/div&gt;&lt;div&gt;handleKeyUp(eventData: CanvasKeyboardEventData, manager: EditorStateManager): void&lt;/div&gt;&lt;div&gt;Назначение: Обработка отпускания клавиши.&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-195" vertex="1">
+          <mxGeometry y="60" width="630" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-199" value="Роль: Управляет текущим режимом/состоянием работы редактора. Делегирует обработку событий холста текущему активному состоянию." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="2300" width="630" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-200" value="Роль: Определяет общий контракт для всех состояний редактора." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="2740" width="630" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-201" value="Состояния&lt;br&gt;&lt;div style=&quot;font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;DefaultState&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;DrawingLineState&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;AddingShapeState&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;TextEditingState&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=light-dark(#000000,#F6F6F6);" parent="1" vertex="1">
+          <mxGeometry x="240" y="2803" width="206" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-205" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-BFE-0557lTRO9eb6wUR-202" target="-BFE-0557lTRO9eb6wUR-204" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-206" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-BFE-0557lTRO9eb6wUR-202" target="-BFE-0557lTRO9eb6wUR-203" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-202" value="Паттерн Observer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="792.75" y="-1504" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-203" value="«interface» ISubject" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="550" y="-1410" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-204" value="«interface» IObserver" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="950" y="-1410" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-207" value="Роль: Определяет контракт для объекта, за которым можно наблюдать (Издатель)." style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="550" y="-1360" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-208" value="Роль: Определяет контракт для объекта, который наблюдает за Субъектом (Подписчик)." style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="950" y="-1360" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-209" value="&lt;div&gt;registerObserver(observer: IObserver): void&lt;/div&gt;&lt;div&gt;unregisterObserver(observer: IObserver): void&lt;/div&gt;&lt;div&gt;notifyObservers(data?: any): void&lt;/div&gt;" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="550" y="-1310" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-210" value="update(): void&amp;nbsp;" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="950" y="-1310" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-211" value="External Services" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="276.5" y="2990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-213" value="External Logging System" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="3150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-214" value="File System API" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="276.5" y="3150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-215" value="IndexedDB" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="3150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-216" value="&lt;div&gt;LoggingService (Класс)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="731.12" y="2410" width="433" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-218" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-216" vertex="1">
+          <mxGeometry y="26" width="433" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-219" value="&lt;div&gt;logInfo(message: string, data?: any): void&lt;/div&gt;&lt;div&gt;logError(error: Error | string, context?: string, data?: any): void&lt;/div&gt;&lt;div&gt;logUserAction(actionName: string, details?: any): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-216" vertex="1">
+          <mxGeometry y="34" width="433" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-220" value="ShapeGroup" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-440" y="40" width="490" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-221" value="private children: BaseShape[] = []&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-220" vertex="1">
+          <mxGeometry y="26" width="490" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-222" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-BFE-0557lTRO9eb6wUR-220" vertex="1">
+          <mxGeometry y="70" width="490" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-223" value="&lt;div&gt;constructor()&lt;/div&gt;&lt;div&gt;add(component: BaseShape): void (добавляет фигуру или другую группу в this.children)&lt;/div&gt;&lt;div&gt;remove(component: BaseShape): void (удаляет из this.children)&lt;/div&gt;&lt;div&gt;getChildren(): BaseShape[] (возвращает this.children)&lt;/div&gt;&lt;div&gt;getProperties(): Record&amp;lt;string, any&amp;gt; (может возвращать общие свойства детей или { type: &quot;group&quot; })&lt;/div&gt;&lt;div&gt;setProperties(props: Partial&amp;lt;Record&amp;lt;string, any&amp;gt;&amp;gt;): void (применяет общие свойства ко всем children)&lt;/div&gt;&lt;div&gt;getBounds(): { x, y, width, height } (вычисляет общий bounds для всех children)&lt;/div&gt;&lt;div&gt;move(dx: number, dy: number): void (вызывает move(dx, dy) у каждого child)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-BFE-0557lTRO9eb6wUR-220" vertex="1">
+          <mxGeometry y="78" width="490" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="-BFE-0557lTRO9eb6wUR-224" value="Composite" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-230" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
