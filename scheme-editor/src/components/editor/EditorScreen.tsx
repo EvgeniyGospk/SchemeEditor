@@ -205,12 +205,23 @@ function EditorScreen() {
     const DEBOUNCE_DELAY = 150;
 
     const handleGlobalKeyDown = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.code === "KeyS") {
+        console.log("DEBUG: Ctrl+S detected", {
+          ctrlKey: event.ctrlKey,
+          shiftKey: event.shiftKey,
+          code: event.code,
+          target: event.target,
+          tagName: (event.target as Element)?.tagName,
+        });
+      }
+
       const isInputElement =
         event.target instanceof HTMLInputElement ||
         event.target instanceof HTMLTextAreaElement ||
         (event.target instanceof HTMLElement && event.target.isContentEditable);
 
       if (isInputElement) {
+        console.log("DEBUG: Key event blocked - input element has focus");
         return;
       }
 
@@ -267,6 +278,12 @@ function EditorScreen() {
       if (event.ctrlKey && !event.shiftKey && event.code === "KeyS") {
         event.preventDefault();
         event.stopPropagation();
+
+        if (now - lastActionTime < DEBOUNCE_DELAY) {
+          return;
+        }
+        lastActionTime = now;
+
         appController.saveScheme();
         appController.logInfo("EditorScreen: Save executed");
         return;

@@ -17,7 +17,7 @@ export class ImportFromFileCommand implements ICommand {
   constructor(
     currentScheme: Scheme,
     shapeFactory: ShapeFactory,
-    callbacks: ImportCallbacks = {}
+    callbacks: ImportCallbacks = {},
   ) {
     this.currentScheme = currentScheme;
     this.shapeFactory = shapeFactory;
@@ -59,13 +59,13 @@ export class ImportFromFileCommand implements ICommand {
 
       const importedScheme = Scheme.fromJSON(
         data as SchemeStoreData,
-        this.shapeFactory
+        this.shapeFactory,
       );
       this.updateCurrentScheme(importedScheme);
       this.callbacks.onSuccess?.(this.currentScheme);
     } catch (error) {
       this.handleError(
-        error instanceof Error ? error : new Error("Import failed")
+        error instanceof Error ? error : new Error("Import failed"),
       );
     }
   }

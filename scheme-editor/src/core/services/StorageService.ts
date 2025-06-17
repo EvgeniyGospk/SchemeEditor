@@ -75,7 +75,7 @@ export class StorageService {
 
       if (result) {
         LoggingService.info(
-          `StorageService: Successfully loaded scheme "${result.name}" with ${result.shapes.length} shapes and ${result.lines.length} lines`
+          `StorageService: Successfully loaded scheme "${result.name}" with ${result.shapes.length} shapes and ${result.lines.length} lines`,
         );
         LoggingService.debug("StorageService: Loaded data:", {
           id: result.id,
@@ -102,7 +102,7 @@ export class StorageService {
     };
 
     LoggingService.info(
-      `StorageService: Saving scheme "${scheme.name}" to IndexedDB`
+      `StorageService: Saving scheme "${scheme.name}" to IndexedDB`,
     );
     LoggingService.debug("StorageService: Data being saved:", {
       id: storeData.id,
@@ -117,12 +117,12 @@ export class StorageService {
       const db = await this.dbPromise;
       await db.put(this.storeName, storeData);
       LoggingService.info(
-        `StorageService: Successfully saved scheme "${scheme.name}" to IndexedDB`
+        `StorageService: Successfully saved scheme "${scheme.name}" to IndexedDB`,
       );
     } catch (error) {
       LoggingService.error(
         `Failed to save scheme "${scheme.name}" to IndexedDB:`,
-        error
+        error,
       );
       throw new Error("Failed to save scheme");
     }

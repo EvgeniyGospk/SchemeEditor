@@ -172,7 +172,7 @@ const PropertiesPanel: React.FC = () => {
                 } catch (error) {
                   appController.logError(
                     "Error removing selection listener:",
-                    error
+                    error,
                   );
                 }
               }
@@ -203,7 +203,7 @@ const PropertiesPanel: React.FC = () => {
     (
       property: string,
       value: string | number,
-      elementType: "shape" | "line" = "shape"
+      elementType: "shape" | "line" = "shape",
     ) => {
       if (
         (selectedShapes.length > 0 || selectedLines.length > 0) &&
@@ -235,7 +235,7 @@ const PropertiesPanel: React.FC = () => {
                   appController.executeChangeMultiplePropertiesCommand(
                     shapeIds,
                     { [property]: value },
-                    "shape"
+                    "shape",
                   );
                 }
               } else {
@@ -244,7 +244,7 @@ const PropertiesPanel: React.FC = () => {
                   appController.executeChangePropertyCommand(
                     shapeId,
                     { [property]: value },
-                    "shape"
+                    "shape",
                   );
                 }
               }
@@ -258,7 +258,7 @@ const PropertiesPanel: React.FC = () => {
                   appController.executeChangeMultiplePropertiesCommand(
                     lineIds,
                     { [property]: value },
-                    "line"
+                    "line",
                   );
                 }
               } else {
@@ -267,7 +267,7 @@ const PropertiesPanel: React.FC = () => {
                   appController.executeChangePropertyCommand(
                     lineId,
                     { [property]: value },
-                    "line"
+                    "line",
                   );
                 }
               }
@@ -281,7 +281,7 @@ const PropertiesPanel: React.FC = () => {
         debounceTimers.current.set(property, newTimer);
       }
     },
-    [selectedShapes, selectedLines]
+    [selectedShapes, selectedLines],
   );
 
   if (!isInitialized) {
@@ -479,7 +479,7 @@ const PropertiesPanel: React.FC = () => {
               selectedShapes.length > 1
                 ? `Mixed (${[
                     ...new Set(
-                      selectedShapes.map((s) => s.getProperties().type)
+                      selectedShapes.map((s) => s.getProperties().type),
                     ),
                   ].join(", ")})`
                 : properties.type || "unknown"

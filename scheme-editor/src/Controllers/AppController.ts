@@ -16,7 +16,7 @@ import {
   type SchemeMetadata,
 } from "../core/services/StorageService";
 import { LoggingService } from "../core/services/LoggingService";
-// Command imports
+
 import { CreateShapeCommand } from "../Commands/CreateShapeCommand";
 import { SaveToDbCommand } from "../Commands/SaveToDbCommand";
 import { ExportToFileCommand } from "../Commands/ExportToFileCommand";
@@ -64,18 +64,18 @@ class AppController {
 
     LoggingService.info(
       `AppController initialized (instance #${this.instanceId}). Current editor state:`,
-      this.editorStateManager.getCurrentStateName()
+      this.editorStateManager.getCurrentStateName(),
     );
     LoggingService.info("SelectionManager initialized.");
 
     LoggingService.debug(
-      `Command manager initialized for instance #${this.instanceId}`
+      `Command manager initialized for instance #${this.instanceId}`,
     );
   }
 
   public requestCreateShape(
     shapeType: string,
-    properties: Record<string, unknown> = {}
+    properties: Record<string, unknown> = {},
   ): void {
     const simpleProperties: Record<string, string | number | boolean> = {};
     Object.entries(properties).forEach(([key, value]) => {
@@ -92,7 +92,7 @@ class AppController {
       this.scheme,
       this.shapeFactory,
       shapeType,
-      simpleProperties
+      simpleProperties,
     );
     this.commandManager.executeCommand(createCommand);
   }
@@ -125,14 +125,14 @@ class AppController {
   public undo(): boolean {
     const historySize = this.commandManager.getHistorySize();
     LoggingService.debug(
-      `AppController (instance #${this.instanceId}): Attempting undo. History: ${historySize.undoCount} undo, ${historySize.redoCount} redo`
+      `AppController (instance #${this.instanceId}): Attempting undo. History: ${historySize.undoCount} undo, ${historySize.redoCount} redo`,
     );
 
     const success = this.commandManager.undo();
     LoggingService.info(
       success
         ? `AppController (instance #${this.instanceId}): Undo successful`
-        : `AppController (instance #${this.instanceId}): Nothing to undo`
+        : `AppController (instance #${this.instanceId}): Nothing to undo`,
     );
     return success;
   }
@@ -140,14 +140,14 @@ class AppController {
   public redo(): boolean {
     const historySize = this.commandManager.getHistorySize();
     LoggingService.debug(
-      `AppController (instance #${this.instanceId}): Attempting redo. History: ${historySize.undoCount} undo, ${historySize.redoCount} redo`
+      `AppController (instance #${this.instanceId}): Attempting redo. History: ${historySize.undoCount} undo, ${historySize.redoCount} redo`,
     );
 
     const success = this.commandManager.redo();
     LoggingService.info(
       success
         ? `AppController (instance #${this.instanceId}): Redo successful`
-        : `AppController (instance #${this.instanceId}): Nothing to redo`
+        : `AppController (instance #${this.instanceId}): Nothing to redo`,
     );
     return success;
   }
@@ -191,7 +191,7 @@ class AppController {
     if (!Array.isArray(result)) {
       LoggingService.error(
         "ERROR: getSelectedIds() returned non-array:",
-        result
+        result,
       );
       return [];
     }
@@ -212,7 +212,7 @@ class AppController {
         "ERROR: getSelectedIds() returned non-string items:",
         invalidItems,
         "Full result:",
-        result
+        result,
       );
       LoggingService.error("Stack trace:", new Error().stack);
     }
@@ -256,7 +256,7 @@ class AppController {
 
   public startDrawingLineFromConnectionPoint(
     shapeId: string,
-    pointId: string
+    pointId: string,
   ): void {
     LoggingService.info("AppController: Starting line from connection point");
     this.editorStateManager.setDrawingLineState({
@@ -267,11 +267,11 @@ class AppController {
 
   public finishLineToConnectionPoint(
     targetShapeId: string,
-    targetPointId: string
+    targetPointId: string,
   ): void {
     this.editorStateManager.finishLineToConnectionPoint(
       targetShapeId,
-      targetPointId
+      targetPointId,
     );
   }
 
@@ -351,20 +351,20 @@ class AppController {
       } catch (error) {
         LoggingService.warn(
           "AppController: Failed to generate preview:",
-          error
+          error,
         );
         previewData = undefined;
       }
     } else {
       LoggingService.warn(
-        "AppController: No Konva Stage available for preview generation"
+        "AppController: No Konva Stage available for preview generation",
       );
     }
 
     const saveCommand = new SaveToDbCommand(
       this.scheme,
       this.storageService,
-      previewData
+      previewData,
     );
 
     this.commandManager.executeCommand(saveCommand);
@@ -387,7 +387,7 @@ class AppController {
         },
         onError: (error: Error) =>
           LoggingService.error("Import failed:", error),
-      }
+      },
     );
     this.commandManager.executeCommand(importCommand);
   }
@@ -411,7 +411,7 @@ class AppController {
   public setScheme(scheme: Scheme, clearCommandHistory: boolean = true): void {
     LoggingService.info(
       `AppController (instance #${this.instanceId}): Setting new scheme:`,
-      scheme.name
+      scheme.name,
     );
 
     this.selectionManager.clearSelection();
@@ -420,7 +420,7 @@ class AppController {
     if (clearCommandHistory) {
       this.commandManager.clearHistory();
       LoggingService.debug(
-        `AppController (instance #${this.instanceId}): Command history cleared for new scheme`
+        `AppController (instance #${this.instanceId}): Command history cleared for new scheme`,
       );
     }
 
@@ -436,7 +436,7 @@ class AppController {
     LoggingService.info(
       `AppController (instance #${this.instanceId}): New scheme set successfully with`,
       scheme.getShapes().length,
-      "shapes"
+      "shapes",
     );
   }
 
@@ -445,7 +445,7 @@ class AppController {
   }
 
   public convertKonvaMouseEvent(
-    konvaEvent: Konva.KonvaEventObject<MouseEvent>
+    konvaEvent: Konva.KonvaEventObject<MouseEvent>,
   ): CanvasMouseEventData {
     const stage = konvaEvent.target.getStage();
     const pointerPosition = stage?.getPointerPosition() || { x: 0, y: 0 };
@@ -464,7 +464,7 @@ class AppController {
   }
 
   public convertKeyboardEvent(
-    keyboardEvent: KeyboardEvent
+    keyboardEvent: KeyboardEvent,
   ): CanvasKeyboardEventData {
     return {
       key: keyboardEvent.key,
@@ -488,7 +488,7 @@ class AppController {
       .map((s) => s.getZIndex())
       .filter(
         (zIndex): zIndex is number =>
-          typeof zIndex === "number" && !isNaN(zIndex)
+          typeof zIndex === "number" && !isNaN(zIndex),
       );
 
     const minZIndex = validZIndices.length > 0 ? Math.min(...validZIndices) : 0;
@@ -498,11 +498,11 @@ class AppController {
       this.scheme,
       shapeId,
       { zIndex: newZIndex },
-      "shape"
+      "shape",
     );
     this.commandManager.executeCommand(command);
     LoggingService.info(
-      `Shape ${shapeId} sent to back with z-index: ${newZIndex}`
+      `Shape ${shapeId} sent to back with z-index: ${newZIndex}`,
     );
   }
 
@@ -518,7 +518,7 @@ class AppController {
       .map((s) => s.getZIndex())
       .filter(
         (zIndex): zIndex is number =>
-          typeof zIndex === "number" && !isNaN(zIndex)
+          typeof zIndex === "number" && !isNaN(zIndex),
       );
 
     const maxZIndex = validZIndices.length > 0 ? Math.max(...validZIndices) : 0;
@@ -528,11 +528,11 @@ class AppController {
       this.scheme,
       shapeId,
       { zIndex: newZIndex },
-      "shape"
+      "shape",
     );
     this.commandManager.executeCommand(command);
     LoggingService.info(
-      `Shape ${shapeId} brought to front with z-index: ${newZIndex}`
+      `Shape ${shapeId} brought to front with z-index: ${newZIndex}`,
     );
   }
 
@@ -574,7 +574,7 @@ class AppController {
   public executeChangePropertyCommand(
     shapeId: string,
     properties: Record<string, unknown>,
-    elementType: "shape" | "line" = "shape"
+    elementType: "shape" | "line" = "shape",
   ): void {
     const simpleProperties: Record<string, string | number | boolean> = {};
     Object.entries(properties).forEach(([key, value]) => {
@@ -591,7 +591,7 @@ class AppController {
       this.scheme,
       shapeId,
       simpleProperties,
-      elementType
+      elementType,
     );
     this.commandManager.executeCommand(command);
   }
@@ -599,7 +599,7 @@ class AppController {
   public executeChangeMultiplePropertiesCommand(
     elementIds: string[],
     properties: Record<string, unknown>,
-    elementType: "shape" | "line" = "shape"
+    elementType: "shape" | "line" = "shape",
   ): void {
     const simpleProperties: Record<string, string | number | boolean> = {};
     Object.entries(properties).forEach(([key, value]) => {
@@ -616,34 +616,33 @@ class AppController {
       this.scheme,
       elementIds,
       simpleProperties,
-      elementType
+      elementType,
     );
     this.commandManager.executeCommand(command);
   }
 
   public async loadSchemeFromStorage(schemeId: string): Promise<Scheme | null> {
     LoggingService.info(
-      `AppController: Loading scheme from storage with ID: ${schemeId}`
+      `AppController: Loading scheme from storage with ID: ${schemeId}`,
     );
 
     try {
-      const schemeData = await this.storageService.getSchemeDataFromDB(
-        schemeId
-      );
+      const schemeData =
+        await this.storageService.getSchemeDataFromDB(schemeId);
       if (schemeData) {
         LoggingService.info(
-          `AppController: Creating scheme from loaded data. Shapes: ${schemeData.shapes.length}, Lines: ${schemeData.lines.length}`
+          `AppController: Creating scheme from loaded data. Shapes: ${schemeData.shapes.length}, Lines: ${schemeData.lines.length}`,
         );
         const scheme = Scheme.fromJSON(schemeData, this.shapeFactory);
         LoggingService.info(
           `AppController: Successfully loaded scheme "${scheme.name}" with ${
             scheme.getShapes().length
-          } shapes and ${scheme.getLines().length} lines`
+          } shapes and ${scheme.getLines().length} lines`,
         );
         return scheme;
       } else {
         LoggingService.warn(
-          `AppController: No scheme data found for ID: ${schemeId}`
+          `AppController: No scheme data found for ID: ${schemeId}`,
         );
       }
       return null;

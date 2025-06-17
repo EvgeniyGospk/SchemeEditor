@@ -11,7 +11,7 @@ export class SaveToDbCommand implements ICommand {
   constructor(
     scheme: Scheme,
     storageService: StorageService,
-    preview?: string
+    preview?: string,
   ) {
     this.scheme = scheme;
     this.storageService = storageService;
@@ -21,11 +21,10 @@ export class SaveToDbCommand implements ICommand {
   execute(): void {
     this.scheme.lastModified = Date.now();
 
-    // Add detailed logging before saving
     LoggingService.info(
       `SaveToDbCommand: Attempting to save scheme "${this.scheme.name}" with ${
         this.scheme.getShapes().length
-      } shapes and ${this.scheme.getLines().length} lines`
+      } shapes and ${this.scheme.getLines().length} lines`,
     );
     LoggingService.debug("SaveToDbCommand: Scheme data:", {
       id: this.scheme.id,
@@ -39,7 +38,7 @@ export class SaveToDbCommand implements ICommand {
       .saveSchemeToDB(this.scheme, this.preview)
       .then(() => {
         LoggingService.info(
-          `Scheme "${this.scheme.name}" saved to IndexedDB with preview`
+          `Scheme "${this.scheme.name}" saved to IndexedDB with preview`,
         );
       })
       .catch((error) => {

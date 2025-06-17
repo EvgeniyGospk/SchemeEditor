@@ -15,7 +15,7 @@ export class CreateShapeCommand implements ICommand {
     scheme: Scheme,
     shapeFactory: ShapeFactory,
     shapeType: string,
-    properties: Record<string, string | number | boolean> = {}
+    properties: Record<string, string | number | boolean> = {},
   ) {
     this.scheme = scheme;
     this.shapeFactory = shapeFactory;
@@ -30,20 +30,18 @@ export class CreateShapeCommand implements ICommand {
         return;
       }
 
-      // Calculate the next z-index for the new shape
       const allShapes = this.scheme.getShapes();
       const validZIndices = allShapes
         .map((s) => s.getZIndex())
         .filter(
           (zIndex): zIndex is number =>
-            typeof zIndex === "number" && !isNaN(zIndex)
+            typeof zIndex === "number" && !isNaN(zIndex),
         );
 
       const maxZIndex =
         validZIndices.length > 0 ? Math.max(...validZIndices) : -1;
       const nextZIndex = maxZIndex + 1;
 
-      // Add zIndex to properties if not already set
       const propertiesWithZIndex = {
         ...this.properties,
         zIndex:
@@ -55,7 +53,7 @@ export class CreateShapeCommand implements ICommand {
 
       this.createdShape = this.shapeFactory.createShape(
         this.shapeType,
-        propertiesWithZIndex
+        propertiesWithZIndex,
       );
       if (this.createdShape) {
         this.scheme.addShape(this.createdShape);
