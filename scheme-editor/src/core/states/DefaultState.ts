@@ -104,7 +104,6 @@ export class DefaultState implements IEditorState {
 
         if (!shiftKey && !ctrlKey) {
           if (!isShapeAlreadySelected) {
-
             deps.selectionManager.clearSelection();
             this.clickedSelectedShapeInMultiSelection = null;
           } else if (selectedIdsBefore.length > 1) {

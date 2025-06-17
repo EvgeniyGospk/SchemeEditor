@@ -67,9 +67,28 @@ export class StorageService {
   }
 
   async getSchemeDataFromDB(id: UID): Promise<SchemeStoreData | undefined> {
+    LoggingService.info(`StorageService: Loading scheme with ID: ${id}`);
+
     try {
       const db = await this.dbPromise;
-      return await db.get(this.storeName, id);
+      const result = await db.get(this.storeName, id);
+
+      if (result) {
+        LoggingService.info(
+          `StorageService: Successfully loaded scheme "${result.name}" with ${result.shapes.length} shapes and ${result.lines.length} lines`
+        );
+        LoggingService.debug("StorageService: Loaded data:", {
+          id: result.id,
+          name: result.name,
+          shapesCount: result.shapes.length,
+          linesCount: result.lines.length,
+          lastModified: result.lastModified,
+        });
+      } else {
+        LoggingService.warn(`StorageService: No scheme found with ID: ${id}`);
+      }
+
+      return result;
     } catch (error) {
       LoggingService.error("Failed to fetch scheme from IndexedDB:", error);
       throw new Error("Failed to fetch scheme");
@@ -82,13 +101,28 @@ export class StorageService {
       preview: preview,
     };
 
+    LoggingService.info(
+      `StorageService: Saving scheme "${scheme.name}" to IndexedDB`
+    );
+    LoggingService.debug("StorageService: Data being saved:", {
+      id: storeData.id,
+      name: storeData.name,
+      shapesCount: storeData.shapes.length,
+      linesCount: storeData.lines.length,
+      hasPreview: !!preview,
+      lastModified: storeData.lastModified,
+    });
+
     try {
       const db = await this.dbPromise;
       await db.put(this.storeName, storeData);
+      LoggingService.info(
+        `StorageService: Successfully saved scheme "${scheme.name}" to IndexedDB`
+      );
     } catch (error) {
       LoggingService.error(
         `Failed to save scheme "${scheme.name}" to IndexedDB:`,
-        error,
+        error
       );
       throw new Error("Failed to save scheme");
     }

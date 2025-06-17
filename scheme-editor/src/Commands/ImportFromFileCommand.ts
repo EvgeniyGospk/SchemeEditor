@@ -1,6 +1,7 @@
 import type { ICommand } from "./ICommand";
 import { Scheme } from "../models/Scheme";
 import type { ShapeFactory } from "../core/services/ShapeFactory";
+import type { SchemeStoreData } from "../core/services/StorageService";
 import { v4 as uuidv4 } from "uuid";
 
 interface ImportCallbacks {
@@ -14,7 +15,7 @@ export class ImportFromFileCommand implements ICommand {
   private callbacks: ImportCallbacks;
 
   constructor(
-    currentScheme: Scheme, 
+    currentScheme: Scheme,
     shapeFactory: ShapeFactory,
     callbacks: ImportCallbacks = {}
   ) {
@@ -26,14 +27,13 @@ export class ImportFromFileCommand implements ICommand {
   execute(): void {
     const input = this.createFileInput();
     input.onchange = (event) => this.handleFileSelection(event);
-    
+
     document.body.appendChild(input);
     input.click();
     document.body.removeChild(input);
   }
 
-  undo(): void {
-  }
+  undo(): void {}
 
   private createFileInput(): HTMLInputElement {
     const input = document.createElement("input");
@@ -56,12 +56,17 @@ export class ImportFromFileCommand implements ICommand {
   private handleFileLoad(event: ProgressEvent<FileReader>): void {
     try {
       const data = this.parseFileData(event.target?.result as string);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const importedScheme = Scheme.fromJSON(data as any, this.shapeFactory);
+
+      const importedScheme = Scheme.fromJSON(
+        data as SchemeStoreData,
+        this.shapeFactory
+      );
       this.updateCurrentScheme(importedScheme);
       this.callbacks.onSuccess?.(this.currentScheme);
     } catch (error) {
-      this.handleError(error instanceof Error ? error : new Error("Import failed"));
+      this.handleError(
+        error instanceof Error ? error : new Error("Import failed")
+      );
     }
   }
 
@@ -73,8 +78,13 @@ export class ImportFromFileCommand implements ICommand {
 
   private validateSchemeData(data: unknown): void {
     const schemeData = data as Record<string, unknown>;
-    
-    if (!schemeData.id || !schemeData.name || !Array.isArray(schemeData.shapes) || !Array.isArray(schemeData.lines)) {
+
+    if (
+      !schemeData.id ||
+      !schemeData.name ||
+      !Array.isArray(schemeData.shapes) ||
+      !Array.isArray(schemeData.lines)
+    ) {
       throw new Error("Invalid scheme file format");
     }
   }

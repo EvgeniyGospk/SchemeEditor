@@ -3,12 +3,12 @@ import type {
   CanvasKeyboardEventData,
 } from "../../types.d";
 import type { Scheme } from "../../models/Scheme";
-import type { SelectableElement } from "../../components/editor/managers/SelectionManager";
+import type { SelectableElement } from "../managers/SelectionManager";
 import type { ICommand } from "../../Commands/ICommand";
 import type { BaseShape } from "../../models/BaseShape";
 import type { Line } from "../../models/Line";
 import type { ShapeFactory } from "../services/ShapeFactory";
-import type { SelectionChangedEvent } from "../../components/editor/managers/SelectionManager";
+import type { SelectionChangedEvent } from "../managers/SelectionManager";
 
 export type { CanvasMouseEventData, CanvasKeyboardEventData };
 

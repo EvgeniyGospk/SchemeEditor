@@ -11,49 +11,6 @@ const ColorPicker: React.FC<{
 }> = ({ label, value, onChange, placeholder = "#ffffff" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const colorPalette = [
-    "#ffffff",
-    "#f8f9fa",
-    "#e9ecef",
-    "#dee2e6",
-    "#ced4da",
-    "#adb5bd",
-    "#6c757d",
-    "#495057",
-    "#343a40",
-    "#212529",
-    "#fff3cd",
-    "#ffeaa7",
-    "#fdcb6e",
-    "#e17055",
-    "#d63031",
-    "#fd79a8",
-    "#e84393",
-    "#a29bfe",
-    "#6c5ce7",
-    "#74b9ff",
-    "#0984e3",
-    "#00b894",
-    "#00cec9",
-    "#55a3ff",
-    "#26de81",
-    "#fd79a8",
-    "#fdcb6e",
-    "#e17055",
-    "#f39c12",
-    "#e74c3c",
-    "#9b59b6",
-    "#3498db",
-    "#1abc9c",
-    "#2ecc71",
-    "#f1c40f",
-    "#e67e22",
-    "#95a5a6",
-    "#34495e",
-    "#2c3e50",
-    "#000000",
-  ];
-
   return (
     <div className="relative">
       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -90,21 +47,7 @@ const ColorPicker: React.FC<{
         {}
         {isOpen && (
           <div className="absolute z-10 p-3 bg-white border border-gray-200 rounded-lg shadow-lg">
-            <div className="grid grid-cols-10 gap-1 w-48">
-              {colorPalette.map((color) => (
-                <button
-                  key={color}
-                  type="button"
-                  onClick={() => {
-                    onChange(color);
-                    setIsOpen(false);
-                  }}
-                  className="w-4 h-4 rounded border border-gray-300 hover:scale-110 transition-transform"
-                  style={{ backgroundColor: color }}
-                  title={color}
-                />
-              ))}
-            </div>
+            <div className="grid grid-cols-10 gap-1 w-48"></div>
             <button
               type="button"
               onClick={() => setIsOpen(false)}
@@ -229,7 +172,7 @@ const PropertiesPanel: React.FC = () => {
                 } catch (error) {
                   appController.logError(
                     "Error removing selection listener:",
-                    error,
+                    error
                   );
                 }
               }
@@ -260,7 +203,7 @@ const PropertiesPanel: React.FC = () => {
     (
       property: string,
       value: string | number,
-      elementType: "shape" | "line" = "shape",
+      elementType: "shape" | "line" = "shape"
     ) => {
       if (
         (selectedShapes.length > 0 || selectedLines.length > 0) &&
@@ -292,7 +235,7 @@ const PropertiesPanel: React.FC = () => {
                   appController.executeChangeMultiplePropertiesCommand(
                     shapeIds,
                     { [property]: value },
-                    "shape",
+                    "shape"
                   );
                 }
               } else {
@@ -301,7 +244,7 @@ const PropertiesPanel: React.FC = () => {
                   appController.executeChangePropertyCommand(
                     shapeId,
                     { [property]: value },
-                    "shape",
+                    "shape"
                   );
                 }
               }
@@ -315,7 +258,7 @@ const PropertiesPanel: React.FC = () => {
                   appController.executeChangeMultiplePropertiesCommand(
                     lineIds,
                     { [property]: value },
-                    "line",
+                    "line"
                   );
                 }
               } else {
@@ -324,7 +267,7 @@ const PropertiesPanel: React.FC = () => {
                   appController.executeChangePropertyCommand(
                     lineId,
                     { [property]: value },
-                    "line",
+                    "line"
                   );
                 }
               }
@@ -338,7 +281,7 @@ const PropertiesPanel: React.FC = () => {
         debounceTimers.current.set(property, newTimer);
       }
     },
-    [selectedShapes, selectedLines],
+    [selectedShapes, selectedLines]
   );
 
   if (!isInitialized) {
@@ -536,7 +479,7 @@ const PropertiesPanel: React.FC = () => {
               selectedShapes.length > 1
                 ? `Mixed (${[
                     ...new Set(
-                      selectedShapes.map((s) => s.getProperties().type),
+                      selectedShapes.map((s) => s.getProperties().type)
                     ),
                   ].join(", ")})`
                 : properties.type || "unknown"

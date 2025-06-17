@@ -49,6 +49,5 @@ export class CreateLineCommand implements ICommand {
       this.scheme.removeLine(this.createdLine.id);
     }
     this.scheme.notifyObservers();
-
   }
 }

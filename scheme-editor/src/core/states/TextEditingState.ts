@@ -27,7 +27,7 @@ export class TextEditingState implements IEditorState {
   onEnterState(manager: IEditorStateManager, args?: { shapeId: string }): void {
     if (!args?.shapeId) {
       manager.setState(new DefaultState());
-      return  ;
+      return;
     }
 
     this.editingShapeId = args.shapeId;
@@ -49,7 +49,6 @@ export class TextEditingState implements IEditorState {
   }
 
   onExitState(): void {
-
     this.removeEventListeners();
 
     if (this.textInputElement) {
@@ -148,8 +147,6 @@ export class TextEditingState implements IEditorState {
         this.textInputElement.select();
       }
     }, 10);
-
-  
   }
 
   private applyTextChanges(manager: IEditorStateManager): void {

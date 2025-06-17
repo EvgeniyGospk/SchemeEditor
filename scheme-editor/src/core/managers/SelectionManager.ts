@@ -1,7 +1,7 @@
-import type { BaseShape } from "../../../models/BaseShape";
-import type { Line } from "../../../models/Line";
-import type { Scheme } from "../../../models/Scheme";
-import { LoggingService } from "../../../core/services/LoggingService";
+import type { BaseShape } from "../../models/BaseShape";
+import type { Line } from "../../models/Line";
+import type { Scheme } from "../../models/Scheme";
+import { LoggingService } from "../services/LoggingService";
 
 export type SelectableElement = BaseShape | Line;
 

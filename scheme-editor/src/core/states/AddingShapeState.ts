@@ -12,7 +12,6 @@ interface AddingShapeStateArgs {
   defaultProperties: Record<string, unknown>;
 }
 
-
 export class AddingShapeState implements IEditorState {
   private shapeType: string = "";
   private defaultProperties: Record<string, unknown> = {};

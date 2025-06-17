@@ -3,12 +3,12 @@ import type {
   IEditorStateManager,
   CanvasMouseEventData,
   CanvasKeyboardEventData,
-} from "../../../core/states/IEditorState";
+} from "../states/IEditorState";
 import type { CommandManager } from "./CommandManager";
 import type { SelectionManager } from "./SelectionManager";
-import type { ShapeFactory } from "../../../core/services/ShapeFactory";
-import type { Scheme } from "../../../models/Scheme";
-import { LoggingService } from "../../../core/services/LoggingService";
+import type { ShapeFactory } from "../services/ShapeFactory";
+import type { Scheme } from "../../models/Scheme";
+import { LoggingService } from "../services/LoggingService";
 
 interface EditorStateManagerDependencies {
   commandManager: CommandManager;
@@ -93,7 +93,7 @@ export class EditorStateManager implements IEditorStateManager {
   }
 
   public setDefaultState(): void {
-    import("../../../core/states/DefaultState")
+    import("../states/DefaultState")
       .then(({ DefaultState }) => {
         this.setState(new DefaultState());
       })
@@ -106,7 +106,7 @@ export class EditorStateManager implements IEditorStateManager {
     shapeType: string,
     defaultProperties: Record<string, unknown>,
   ): void {
-    import("../../../core/states/AddingShapeState")
+    import("../states/AddingShapeState")
       .then(({ AddingShapeState }) => {
         this.setState(new AddingShapeState(), {
           shapeType,
@@ -122,7 +122,7 @@ export class EditorStateManager implements IEditorStateManager {
     fromShapeId?: string;
     fromPointId?: string;
   }): void {
-    import("../../../core/states/DrawingLineState")
+    import("../states/DrawingLineState")
       .then(({ DrawingLineState }) => {
         this.setState(new DrawingLineState(), args);
       })

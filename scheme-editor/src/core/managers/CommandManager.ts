@@ -1,5 +1,5 @@
-import type { ICommand } from "../../../Commands/ICommand";
-import { LoggingService } from "../../../core/services/LoggingService";
+import type { ICommand } from "../../Commands/ICommand";
+import { LoggingService } from "../services/LoggingService";
 
 let commandManagerInstanceCounter = 0;
 
