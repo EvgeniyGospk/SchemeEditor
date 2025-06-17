@@ -16,6 +16,14 @@ import {
   type SchemeMetadata,
 } from "../core/services/StorageService";
 import { LoggingService } from "../core/services/LoggingService";
+// Command imports
+import { CreateShapeCommand } from "../Commands/CreateShapeCommand";
+import { SaveToDbCommand } from "../Commands/SaveToDbCommand";
+import { ExportToFileCommand } from "../Commands/ExportToFileCommand";
+import { ImportFromFileCommand } from "../Commands/ImportFromFileCommand";
+import { ChangePropertyCommand } from "../Commands/ChangePropertyCommand";
+import { ChangeMultiplePropertiesCommand } from "../Commands/ChangeMultiplePropertiesCommand";
+import { DeleteElementCommand } from "../Commands/DeleteElementCommand";
 
 let instanceCounter = 0;
 
@@ -69,26 +77,24 @@ class AppController {
     shapeType: string,
     properties: Record<string, unknown> = {}
   ): void {
-    import("../Commands/CreateShapeCommand").then(({ CreateShapeCommand }) => {
-      const simpleProperties: Record<string, string | number | boolean> = {};
-      Object.entries(properties).forEach(([key, value]) => {
-        if (
-          typeof value === "string" ||
-          typeof value === "number" ||
-          typeof value === "boolean"
-        ) {
-          simpleProperties[key] = value;
-        }
-      });
-
-      const createCommand = new CreateShapeCommand(
-        this.scheme,
-        this.shapeFactory,
-        shapeType,
-        simpleProperties
-      );
-      this.commandManager.executeCommand(createCommand);
+    const simpleProperties: Record<string, string | number | boolean> = {};
+    Object.entries(properties).forEach(([key, value]) => {
+      if (
+        typeof value === "string" ||
+        typeof value === "number" ||
+        typeof value === "boolean"
+      ) {
+        simpleProperties[key] = value;
+      }
     });
+
+    const createCommand = new CreateShapeCommand(
+      this.scheme,
+      this.shapeFactory,
+      shapeType,
+      simpleProperties
+    );
+    this.commandManager.executeCommand(createCommand);
   }
 
   public async getAvailableShapeTypes(): Promise<
@@ -355,44 +361,34 @@ class AppController {
       );
     }
 
-    import("../Commands/SaveToDbCommand").then(({ SaveToDbCommand }) => {
-      const saveCommand = new SaveToDbCommand(
-        this.scheme,
-        this.storageService,
-        previewData
-      );
-      this.commandManager.executeCommand(saveCommand);
-    });
+    const saveCommand = new SaveToDbCommand(
+      this.scheme,
+      this.storageService,
+      previewData
+    );
+    this.commandManager.executeCommand(saveCommand);
   }
 
   public saveSchemeAsFile(): void {
     LoggingService.info("AppController: Save scheme as file requested");
-    import("../Commands/ExportToFileCommand").then(
-      ({ ExportToFileCommand }) => {
-        const exportCommand = new ExportToFileCommand(this.scheme);
-        this.commandManager.executeCommand(exportCommand);
-      }
-    );
+    const exportCommand = new ExportToFileCommand(this.scheme);
+    this.commandManager.executeCommand(exportCommand);
   }
 
   public importSchemeFromFile(): void {
     LoggingService.info("AppController: Import scheme from file requested");
-    import("../Commands/ImportFromFileCommand").then(
-      ({ ImportFromFileCommand }) => {
-        const importCommand = new ImportFromFileCommand(
-          this.scheme,
-          this.shapeFactory,
-          {
-            onSuccess: (importedScheme: Scheme) => {
-              this.setScheme(importedScheme);
-            },
-            onError: (error: Error) =>
-              LoggingService.error("Import failed:", error),
-          }
-        );
-        this.commandManager.executeCommand(importCommand);
+    const importCommand = new ImportFromFileCommand(
+      this.scheme,
+      this.shapeFactory,
+      {
+        onSuccess: (importedScheme: Scheme) => {
+          this.setScheme(importedScheme);
+        },
+        onError: (error: Error) =>
+          LoggingService.error("Import failed:", error),
       }
     );
+    this.commandManager.executeCommand(importCommand);
   }
 
   public getCommandManager(): CommandManager {
@@ -490,19 +486,15 @@ class AppController {
     const minZIndex = Math.min(...allShapes.map((s) => s.getZIndex()));
     const newZIndex = minZIndex - 1;
 
-    import("../Commands/ChangePropertyCommand").then(
-      ({ ChangePropertyCommand }) => {
-        const command = new ChangePropertyCommand(
-          this.scheme,
-          shapeId,
-          { zIndex: newZIndex },
-          "shape"
-        );
-        this.commandManager.executeCommand(command);
-        LoggingService.info(
-          `Shape ${shapeId} sent to back with z-index: ${newZIndex}`
-        );
-      }
+    const command = new ChangePropertyCommand(
+      this.scheme,
+      shapeId,
+      { zIndex: newZIndex },
+      "shape"
+    );
+    this.commandManager.executeCommand(command);
+    LoggingService.info(
+      `Shape ${shapeId} sent to back with z-index: ${newZIndex}`
     );
   }
 
@@ -517,35 +509,27 @@ class AppController {
     const maxZIndex = Math.max(...allShapes.map((s) => s.getZIndex()));
     const newZIndex = maxZIndex + 1;
 
-    import("../Commands/ChangePropertyCommand").then(
-      ({ ChangePropertyCommand }) => {
-        const command = new ChangePropertyCommand(
-          this.scheme,
-          shapeId,
-          { zIndex: newZIndex },
-          "shape"
-        );
-        this.commandManager.executeCommand(command);
-        LoggingService.info(
-          `Shape ${shapeId} brought to front with z-index: ${newZIndex}`
-        );
-      }
+    const command = new ChangePropertyCommand(
+      this.scheme,
+      shapeId,
+      { zIndex: newZIndex },
+      "shape"
+    );
+    this.commandManager.executeCommand(command);
+    LoggingService.info(
+      `Shape ${shapeId} brought to front with z-index: ${newZIndex}`
     );
   }
 
   public deleteShape(shapeId: string): void {
-    import("../Commands/DeleteElementCommand").then(
-      ({ DeleteElementCommand }) => {
-        const command = new DeleteElementCommand(this.scheme, shapeId);
-        this.commandManager.executeCommand(command);
+    const command = new DeleteElementCommand(this.scheme, shapeId);
+    this.commandManager.executeCommand(command);
 
-        if (this.selectionManager.isSelected(shapeId)) {
-          this.selectionManager.deselectElement(shapeId);
-        }
+    if (this.selectionManager.isSelected(shapeId)) {
+      this.selectionManager.deselectElement(shapeId);
+    }
 
-        LoggingService.info(`Shape ${shapeId} deleted`);
-      }
-    );
+    LoggingService.info(`Shape ${shapeId} deleted`);
   }
 
   public async getAllSchemes(): Promise<SchemeMetadata[]> {
@@ -577,28 +561,24 @@ class AppController {
     properties: Record<string, unknown>,
     elementType: "shape" | "line" = "shape"
   ): void {
-    import("../Commands/ChangePropertyCommand").then(
-      ({ ChangePropertyCommand }) => {
-        const simpleProperties: Record<string, string | number | boolean> = {};
-        Object.entries(properties).forEach(([key, value]) => {
-          if (
-            typeof value === "string" ||
-            typeof value === "number" ||
-            typeof value === "boolean"
-          ) {
-            simpleProperties[key] = value;
-          }
-        });
-
-        const command = new ChangePropertyCommand(
-          this.scheme,
-          shapeId,
-          simpleProperties,
-          elementType
-        );
-        this.commandManager.executeCommand(command);
+    const simpleProperties: Record<string, string | number | boolean> = {};
+    Object.entries(properties).forEach(([key, value]) => {
+      if (
+        typeof value === "string" ||
+        typeof value === "number" ||
+        typeof value === "boolean"
+      ) {
+        simpleProperties[key] = value;
       }
+    });
+
+    const command = new ChangePropertyCommand(
+      this.scheme,
+      shapeId,
+      simpleProperties,
+      elementType
     );
+    this.commandManager.executeCommand(command);
   }
 
   public executeChangeMultiplePropertiesCommand(
@@ -606,28 +586,24 @@ class AppController {
     properties: Record<string, unknown>,
     elementType: "shape" | "line" = "shape"
   ): void {
-    import("../Commands/ChangeMultiplePropertiesCommand").then(
-      ({ ChangeMultiplePropertiesCommand }) => {
-        const simpleProperties: Record<string, string | number | boolean> = {};
-        Object.entries(properties).forEach(([key, value]) => {
-          if (
-            typeof value === "string" ||
-            typeof value === "number" ||
-            typeof value === "boolean"
-          ) {
-            simpleProperties[key] = value;
-          }
-        });
-
-        const command = new ChangeMultiplePropertiesCommand(
-          this.scheme,
-          elementIds,
-          simpleProperties,
-          elementType
-        );
-        this.commandManager.executeCommand(command);
+    const simpleProperties: Record<string, string | number | boolean> = {};
+    Object.entries(properties).forEach(([key, value]) => {
+      if (
+        typeof value === "string" ||
+        typeof value === "number" ||
+        typeof value === "boolean"
+      ) {
+        simpleProperties[key] = value;
       }
+    });
+
+    const command = new ChangeMultiplePropertiesCommand(
+      this.scheme,
+      elementIds,
+      simpleProperties,
+      elementType
     );
+    this.commandManager.executeCommand(command);
   }
 
   public async loadSchemeFromStorage(schemeId: string): Promise<Scheme | null> {
