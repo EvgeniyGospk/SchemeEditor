@@ -23,6 +23,7 @@ export const circlePlugin: ShapePluginDefinition<CircleShapeProperties> = {
     fillColor: "#FFFFFF",
     strokeColor: "#000000",
     strokeWidth: 1,
+    zIndex: 0,
 
     radius: 50,
   },

@@ -23,6 +23,7 @@ export const umlComponentPlugin: ShapePluginDefinition<UmlComponentShapeProperti
       fillColor: "#E0FFE0",
       strokeColor: "#000000",
       strokeWidth: 1,
+      zIndex: 0,
       width: 180,
       height: 100,
       componentName: "NewComponent",

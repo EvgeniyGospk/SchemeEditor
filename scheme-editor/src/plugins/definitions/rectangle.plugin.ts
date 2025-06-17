@@ -26,6 +26,7 @@ export const rectanglePlugin: ShapePluginDefinition<RectangleShapeProperties> =
       fillColor: "#FFFFFF",
       strokeColor: "#000000",
       strokeWidth: 1,
+      zIndex: 0,
     },
     propertyUIDefinitions: rectanglePropertyUIDefinitions,
   };

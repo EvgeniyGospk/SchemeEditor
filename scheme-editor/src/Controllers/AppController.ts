@@ -366,6 +366,7 @@ class AppController {
       this.storageService,
       previewData
     );
+
     this.commandManager.executeCommand(saveCommand);
   }
 
@@ -483,7 +484,14 @@ class AppController {
     }
 
     const allShapes = this.scheme.getShapes();
-    const minZIndex = Math.min(...allShapes.map((s) => s.getZIndex()));
+    const validZIndices = allShapes
+      .map((s) => s.getZIndex())
+      .filter(
+        (zIndex): zIndex is number =>
+          typeof zIndex === "number" && !isNaN(zIndex)
+      );
+
+    const minZIndex = validZIndices.length > 0 ? Math.min(...validZIndices) : 0;
     const newZIndex = minZIndex - 1;
 
     const command = new ChangePropertyCommand(
@@ -506,7 +514,14 @@ class AppController {
     }
 
     const allShapes = this.scheme.getShapes();
-    const maxZIndex = Math.max(...allShapes.map((s) => s.getZIndex()));
+    const validZIndices = allShapes
+      .map((s) => s.getZIndex())
+      .filter(
+        (zIndex): zIndex is number =>
+          typeof zIndex === "number" && !isNaN(zIndex)
+      );
+
+    const maxZIndex = validZIndices.length > 0 ? Math.max(...validZIndices) : 0;
     const newZIndex = maxZIndex + 1;
 
     const command = new ChangePropertyCommand(

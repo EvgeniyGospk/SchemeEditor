@@ -24,6 +24,7 @@ export const umlClassPlugin: ShapePluginDefinition<UmlClassShapeProperties> = {
     fillColor: "#FFFFE0",
     strokeColor: "#000000",
     strokeWidth: 1,
+    zIndex: 0,
 
     width: 200,
     height: 150,
