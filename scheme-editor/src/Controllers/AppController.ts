@@ -334,8 +334,6 @@ class AppController {
   }
 
   public saveScheme(): void {
-    LoggingService.info("AppController: Save scheme requested");
-
     let previewData: string | undefined;
     if (this.konvaStage) {
       try {
@@ -344,7 +342,6 @@ class AppController {
           mimeType: "image/png",
           quality: 0.8,
         });
-        LoggingService.info("AppController: Generated preview for scheme");
       } catch (error) {
         LoggingService.warn(
           "AppController: Failed to generate preview:",
@@ -666,21 +663,6 @@ class AppController {
   }
 }
 
-declare global {
-  interface Window {
-    __appController?: AppController;
-  }
-}
-
-let appController: AppController;
-
-if (typeof window !== "undefined") {
-  if (!window.__appController) {
-    window.__appController = new AppController();
-  }
-  appController = window.__appController;
-} else {
-  appController = new AppController();
-}
+const appController = new AppController();
 
 export default appController;
